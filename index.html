@@ -10,7 +10,78 @@
 </head>
 
 <body>
+  <div id="header">
+    <!-------- Language Selector -------->
+    <div id="language-selector">
+      <button id="en-button">English</button>
+      <button id="es-button">Spanish</button>
+    </div>
+    <div class="container">
+      <nav>
+        <img src="images/logo.png" class="logo" />
+        <ul>
+          <li><a href="#" data-lang="home">Home</a></li>
+          <li><a href="#" data-lang="about-me">About Me</a></li>
+          <li><a href="#" data-lang="services">Service</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#" data-lang="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-text">
+        <p data-lang="subtitle">Junior Web Developer</p>
+        <h1 data-lang="title">Hi, I'm <span>Vanesa</span> <br>Herrera</h1>
+      </div>
+    </div>
+  </div>
+  <!----------------- About ----------------->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/user.jpg"></img>
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title" data-lang="about-title">About Me</h1>
+          <p data-lang="about-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Totam alias quibusdam, quam soluta fugit tenetur laudantium aliquam
+            assumenda ipsa perspiciatis. Porro quibusdam eos commodi quis
+            delectus amet fuga, natus sed?</p>
 
+          <div class="tab-titles">
+            <p class="tab-links active-link" data-lang="skills">Skills</p>
+            <p class="tab-links" data-lang="experience">Experience</p>
+            <p class="tab-links" data-lang="education">Education</p>
+          </div>
+          <div class="tab-contents">
+            <ul>
+
+              <li><span>React/Angular</span><br>Designing Web interfaces</li>
+              <li><span>React/Angular</span><br>Designing Web interfaces</li>
+              <li><span>React/Angular</span><br>Designing Web interfaces</li>
+            </ul>
+          </div>
+          <div class="tab-contents">
+            <ul>
+
+              <li><span>2023</span><br></li>
+              <li><span>2023</span><br>Designing Web interfaces</li>
+              <li><span>2023</span><br>Designing Web interfaces</li>
+            </ul>
+          </div>
+          <div class="tab-contents">
+            <ul>
+
+              <li><span>2021</span><br>Designing Web interfaces</li>
+              <li><span>2021</span><br>Designing Web interfaces</li>
+              <li><span>2021</span><br>Designing Web interfaces</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
