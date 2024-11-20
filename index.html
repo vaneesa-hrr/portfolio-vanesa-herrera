@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vanesa Herrera Portfolio</title>
+
+  <script src="aboutMe.js"></script>
+  <script src="translation.js"></script>
   <link rel="stylesheet" href="style.css" />
 
 </head>
@@ -17,19 +20,21 @@
       <button id="es-button">Spanish</button>
     </div>
     <div class="container">
-      <nav>
+      <nav class="logo-container">
         <img src="images/logo.png" class="logo" />
-        <ul>
-          <li><a href="#" data-lang="home">Home</a></li>
-          <li><a href="#" data-lang="about-me">About Me</a></li>
-          <li><a href="#" data-lang="services">Service</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#" data-lang="contact">Contact</a></li>
-        </ul>
+        <div class="nav-links">
+          <ul>
+            <li><a href="#" data-lang="home">Home</a></li>
+            <li><a href="#" data-lang="about-me">About Me</a></li>
+            <li><a href="#" data-lang="services">Service</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#" data-lang="contact">Contact</a></li>
+          </ul>
+        </div>
       </nav>
       <div class="header-text">
         <p data-lang="subtitle">Junior Web Developer</p>
-        <h1 data-lang="title">Hi, I'm <span>Vanesa</span> <br>Herrera</h1>
+        <h1 data-lang="title">Hi, I'm <span>Vanesa </span><br>Herrera</h1>
       </div>
     </div>
   </div>
@@ -48,11 +53,11 @@
             delectus amet fuga, natus sed?</p>
 
           <div class="tab-titles">
-            <p class="tab-links active-link" data-lang="skills">Skills</p>
-            <p class="tab-links" data-lang="experience">Experience</p>
-            <p class="tab-links" data-lang="education">Education</p>
+            <p class="tab-links active-link" onClick="openTab('skills', event)" data-lang="skills">Skills</p>
+            <p class="tab-links" onClick="openTab('experience', event)" data-lang="experience">Experience</p>
+            <p class="tab-links" onClick="openTab('education', event)" data-lang="education">Education</p>
           </div>
-          <div class="tab-contents">
+          <div class="tab-contents active-tab" id="skills">
             <ul>
 
               <li><span>React/Angular</span><br>Designing Web interfaces</li>
@@ -60,20 +65,20 @@
               <li><span>React/Angular</span><br>Designing Web interfaces</li>
             </ul>
           </div>
-          <div class="tab-contents">
+          <div class="tab-contents" id="experience">
             <ul>
 
-              <li><span>2023</span><br></li>
-              <li><span>2023</span><br>Designing Web interfaces</li>
-              <li><span>2023</span><br>Designing Web interfaces</li>
+              <li><span>2023</span><br>NTT DATA</li>
+              <li><span>2023</span><br>NTT DATA</li>
+              <li><span>2023</span><br>NTT DATA</li>
             </ul>
           </div>
-          <div class="tab-contents">
+          <div class="tab-contents" id="education">
             <ul>
 
-              <li><span>2021</span><br>Designing Web interfaces</li>
-              <li><span>2021</span><br>Designing Web interfaces</li>
-              <li><span>2021</span><br>Designing Web interfaces</li>
+              <li><span>2021</span><br>Web Application Development</li>
+              <li><span>2021</span><br>Higher Vocational Training in Web Application Development</li>
+              <li><span>2021</span><br>Advanced Technical Program in Web Application Development</li>
             </ul>
           </div>
         </div>
@@ -81,7 +86,30 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <!-- ------------------ Services ------------------ -->
+  <div id="services">
+    <div class="container">
+      <h1 class="sub-title">My Services</h1>
+      <div class="services-list">
+        <div>
+          <h2>Web Design</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor nobis sequi harum atque rem eli.</p>
+          <a href="#">learn more</a>
+        </div>
+        <div>
+          <h2>React</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor nobis sequi harum atque rem eli.</p>
+          <a href="#">learn more</a>
+        </div>
+        <div>
+          <h2>Angular</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor nobis sequi harum atque rem eli.</p>
+          <a href="#">learn more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
 
 </html>

@@ -37,12 +37,19 @@ function changeLanguage(language) {
   });
 }
 
-document.getElementById("es-button").addEventListener("click", () => {
-  changeLanguage("es");
-});
+document.addEventListener("DOMContentLoaded", function () {
+  const esButton = document.getElementById("es-button");
+  const enButton = document.getElementById("en-button");
 
-document.getElementById("en-button").addEventListener("click", () => {
-  changeLanguage("en");
+  if (esButton && enButton) {
+    esButton.addEventListener("click", () => {
+      changeLanguage("es");
+    });
+
+    enButton.addEventListener("click", () => {
+      changeLanguage("en");
+    });
+  }
 });
 
 changeLanguage("en");
