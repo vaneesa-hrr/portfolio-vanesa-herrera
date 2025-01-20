@@ -27,6 +27,8 @@ body {
   position: absolute;
   top: 15px;
   right: 25px;
+  display: flex;
+  align-items: center;
 }
 
 #language-selector button {
@@ -405,8 +407,8 @@ form .btn2 {
 }
 
 /*--------------- css for small screens ----------*/
-.fa-bars,
-.fa-circle-xmark {
+nav .fa-bars,
+nav .fa-circle-xmark {
   display: none;
 }
 
@@ -415,31 +417,42 @@ form .btn2 {
     background-image: url(images/background.jpg);
   }
 
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .logo {
+    width: 100px;
+    height: auto;
+  }
+
+  #language-selector button {
+    font-size: 0;
+    padding: 4px 7px;
+  }
+
+  #language-selector button#en-button::after {
+    content: 'EN';
+    font-size: 12px;
+  }
+
+  #language-selector button#es-button::after {
+    content: 'ES';
+    font-size: 12px;
+  }
+
   .header-text {
     margin-top: 100%;
     font-size: 16px;
   }
 
-  x .header-text h1 {
-    font-size: 30px;
-  }
-
-  nav .fa-bars {
-    display: block;
-    font-size: 25px;
-  }
-
+  nav .fa-bars,
   nav .fa-circle-xmark {
     display: block;
     font-size: 25px;
-  }
-
-  nav-links.active .fa-circle-xmark {
-    display: block;
-  }
-
-  nav-links.active .fa-bars {
-    display: none;
   }
 
   nav ul {
@@ -462,14 +475,7 @@ form .btn2 {
     margin: 25px;
   }
 
-  nav ul .fa-bars {
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    cursor: pointer;
-  }
-
-  nav ul .fa-circle-xmark {
+  nav ul .fas {
     position: absolute;
     top: 25px;
     left: 25px;
