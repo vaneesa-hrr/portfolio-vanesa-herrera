@@ -514,3 +514,9 @@ nav .fa-circle-xmark {
   }
 
 }
+
+#msg {
+  color: #61b752;
+  margin-top: -32px;
+  display: block;
+}
