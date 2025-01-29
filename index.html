@@ -17,8 +17,8 @@
   <div id="header">
     <!-- Language Selector -->
     <div id="language-selector">
-      <button id="en-button">English</button>
-      <button id="es-button">Spanish</button>
+      <button id="en-button" data-lang="english">English</button>
+      <button id="es-button" data-lang="spanish">Spanish</button>
     </div>
     <div class="container">
       <nav class="logo-container">
@@ -37,7 +37,8 @@
       </nav>
       <div class="header-text">
         <p data-lang="subtitle">Junior Web Developer</p>
-        <h1 data-lang="title">Hi, I'm <span>Vanesa </span><br>Herrera</h1>
+        <h1 data-lang="title">Hi, I'm</h1>
+        <h1><span>Vanesa </span>Herrera</h1>
       </div>
     </div>
   </div>
@@ -50,10 +51,14 @@
         </div>
         <div class="about-col-2">
           <h1 class="sub-title" data-lang="about-title">About Me</h1>
-          <p data-lang="about-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Totam alias quibusdam, quam soluta fugit tenetur laudantium aliquam
-            assumenda ipsa perspiciatis. Porro quibusdam eos commodi quis
-            delectus amet fuga, natus sed?</p>
+          <p data-lang="about-text">I'm a passionate junior web developer eager to learn and grow. I
+            love working with web technologies to
+            create engaging, user-friendly websites. Though I'm at the beginning of my journey, I’m constantly expanding
+            my skills
+            and taking on new challenges to improve. I’m excited to contribute to projects, collaborate with others, and
+            further
+            develop my coding abilities. I am looking for opportunities to continue developing professionally and
+            contribute with my work to innovative projects.</p>
 
           <div class="tab-titles">
             <p class="tab-links active-link" onClick="openTab('skills', event)" data-lang="skills">Skills</p>
@@ -63,9 +68,36 @@
           <div class="tab-contents active-tab" id="skills">
             <ul>
 
-              <li><span>React/Angular</span><br>Designing Web interfaces</li>
-              <li><span>React/Angular</span><br>Designing Web interfaces</li>
-              <li><span>React/Angular</span><br>Designing Web interfaces</li>
+              <li><span>React/Angular</span><br>
+                <p data-lang="re-an">Developing interactive web interfaces using modern
+                  frameworks, creating efficient and reusable single-page applications
+                  (SPA).</p>
+              </li>
+              <li><span>TypeScript</span><br>
+                <p data-lang="typescript">Enhancing JavaScript with strong typing to improve
+                  code
+                  quality and maintainability, making it easier to scale
+                  applications.
+                </p>
+              </li>
+              <li><span>Bootstrap</span><br>
+                <p data-lang="boots">Building responsive and mobile-first web designs with
+                  pre-built components, ensuring fast development and consistent
+                  layout across devices. </p>
+              </li>
+              <li><span>Java</Em></span><br>
+                <p data-lang="java">Developing web and desktop applications with Java, using
+                  the Eclipse IDE.</p>
+              </li>
+              <li><span>Wordpress/Elementor</span><br>
+                <p data-lang="word-el">Building dynamic websites with WordPress and
+                  Elementor for fast, responsive design.</p>
+              </li>
+              <li><span>SQL/MySQL</span><br>
+                <p data-lang="sql">Writing and optimizing queries, managing databases,
+                  designing schemas, and performing data retrieval and performance
+                  tuning in relational databases. </p>
+              </li>
             </ul>
           </div>
           <div class="tab-contents" id="experience">
