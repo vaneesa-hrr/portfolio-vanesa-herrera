@@ -23,19 +23,21 @@ function closeMenu() {
   sideMenu.style.right = "-200px";
 }
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbxlky3mC3O6djoZfy2xA1x7Umi0oPJdg_vjtps7nkTEqUkGBfvVh8jtLDRvvfWzOL3F/exec'
-const form = document.forms['submit-to-google-sheet'];
+document.addEventListener('DOMContentLoaded', () => {
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyYbNpBcBqBEUWhlDeuqgaFsflhtqBY3gAfhmRIrnGJruwGIgKkohA3ysnf7PAgcMEQ/exec';
+  const form = document.forms['submit-to-google-sheet'];
 
-if (form) {
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
     fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message));
+      .then((response) => response.json())
+      .then((data) => {
+        console.log('Success:', data);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
   });
-} else {
-  console.error("Form not found!");
-}
-
+});
 
 
