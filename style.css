@@ -221,14 +221,28 @@ nav ul li a:hover::after {
 }
 
 .services-list div i {
+  display: flex;
   font-size: 50px;
   margin-bottom: 30px;
+  justify-content: center;
+}
+
+.services-list div .icons {
+  display: flex;
+  gap: 30px;
+  margin-top: -35px;
+  margin-bottom: -40px;
+  transition: none;
+  background: unset;
+  border-radius: unset;
+  pointer-events: none;
 }
 
 .services-list div h2 {
   font-size: 30px;
   font-weight: 500;
   margin-bottom: 15px;
+  text-align: center;
 }
 
 .services-list div a {
@@ -236,7 +250,13 @@ nav ul li a:hover::after {
   color: #fff;
   font-size: 12px;
   margin-top: 20px;
-  display: inline-block;
+}
+
+.services-list div p {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.6;
 }
 
 .services-list div:hover {

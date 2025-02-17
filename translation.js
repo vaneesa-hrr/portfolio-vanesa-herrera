@@ -69,6 +69,15 @@ const translations = {
     arts: "Bachillerato de Artes Escénicas",
     develop: "Grado Superior en Desarrollo de Aplicaciones Web",
     estudiov: "Curso de Formación del Actor",
+    MyServices: "Mis Servicios",
+    websites: "Páginas Web Personalizadas",
+    "desc-web": "Diseño y desarrollo sitios web totalmente personalizados, adaptados a tus necesidades, con un enfoque único y profesional.",
+    "desc-word": "Creo sitios web dinámicos y profesionales con WordPress y Elementor, facilitando su gestión y optimización.",
+    "react-ang": "Desarrollo con React & Angular",
+    "desc-react": "Desarrollo aplicaciones web interactivas y escalables utilizando React y Angular, asegurando el rendimiento y una experiencia de usuario fluida, siguiendo las mejores prácticas y estándares modernos.",
+    "java-type": "Desarrollo con JavaScript & TypeScript",
+    "desc-java": "Desarrollo aplicaciones robustas con JavaScript y TypeScript, mejorando la calidad del código, la mantenibilidad y el rendimiento, mientras implemento funcionalidades dinámicas e interactivas en sitios web.",
+
   },
 };
 
