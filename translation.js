@@ -42,6 +42,7 @@ const translations = {
     "desc-react": "I develop interactive and scalable web applications using React and Angular, ensuring performance and smooth user experience, following best practices and modern standards.",
     "java-type": "JavaScript & TypeScript Development",
     "desc-java": "Develop robust applications with JavaScript and TypeScript, enhancing code quality, maintainability, and performance, while implementing dynamic and interactive features on websites.",
+    MyWork: "My Work",
   },
   es: {
     english: "Inglés",
@@ -85,7 +86,7 @@ const translations = {
     "desc-react": "Desarrollo aplicaciones web interactivas y escalables utilizando React y Angular, asegurando el rendimiento y una experiencia de usuario fluida, siguiendo las mejores prácticas y estándares modernos.",
     "java-type": "Desarrollo con JavaScript & TypeScript",
     "desc-java": "Desarrollo aplicaciones robustas con JavaScript y TypeScript, mejorando la calidad del código, la mantenibilidad y el rendimiento, mientras implemento funcionalidades dinámicas e interactivas en sitios web.",
-
+    MyWork: "Mi Trabajo",
   },
 };
 
