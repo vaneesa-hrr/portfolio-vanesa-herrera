@@ -246,10 +246,22 @@ nav ul li a:hover::after {
 }
 
 .services-list div a {
+  display: inline-block;
   text-decoration: none;
   color: #fff;
   font-size: 12px;
-  margin-top: 20px;
+  padding: 10px 20px;
+  border: 2px solid #0051ff;
+  border-radius: 9px;
+  text-align: center;
+  margin-top: 30px;
+  transition: all 0.3s ease-in-out;
+  margin-left: 35px;
+}
+
+.services-list div a:hover {
+  background: white;
+  color: #262626;
 }
 
 .services-list div p {
