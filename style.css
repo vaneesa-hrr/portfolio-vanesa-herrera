@@ -321,8 +321,9 @@ nav ul li a:hover::after {
 }
 
 .layer h3 {
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: 20px;
+  font-size: 20px;
 }
 
 .layer a {

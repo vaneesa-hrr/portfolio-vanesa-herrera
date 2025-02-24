@@ -6,6 +6,7 @@ const translations = {
     home: "Home",
     "about-me": "About Me",
     services: "Service",
+    portfolio: "Portfolio",
     contact: "Contact",
     subtitle: "Junior Web Developer",
     title: "Hi, I'm",
@@ -33,16 +34,29 @@ const translations = {
     interact: "Using JavaScript to improve interactivity",
     arts: "High School Diploma in Performing Arts",
     develop: "Advanced Technical Degree in Web Application Development",
+    present: "2023 - Present",
     estudiov: "Actor Training Course",
     MyServices: "My Services",
     websites: "Custom Websites",
     "desc-web": "I create fully customized websites tailored to your needs, ensuring unique and high- quality designs.",
+    learnMore: "Learn More",
     "desc-word": "I build professional and dynamic websites using WordPress and Elementor, making website management easy and efficient.",
     "react-ang": "React & Angular Development",
     "desc-react": "I develop interactive and scalable web applications using React and Angular, ensuring performance and smooth user experience, following best practices and modern standards.",
     "java-type": "JavaScript & TypeScript Development",
     "desc-java": "Develop robust applications with JavaScript and TypeScript, enhancing code quality, maintainability, and performance, while implementing dynamic and interactive features on websites.",
     MyWork: "My Work",
+    workReact: "Web application developed with React that allows users to dynamically share and organize links.It features an intuitive interface and functionalities such as adding and categorizing links, providing a seamless user experience.",
+    workWordpress: "Complete website development. The project included the implementation of an attractive and functional design using Elementor, mobile optimization, and the integration of dynamic sections, providing an intuitive and seamless user experience.",
+    workJavaScript: "Development of a personal portfolio using HTML, CSS, and JavaScript. The website features a modern and responsive interface showcasing highlighted projects, skills, and professional experience.It includes interactive functionalities such as dynamic navigation and visual effects, providing an engaging and seamless user experience.",
+    seeMore: "See more",
+    contactMe: "Contact Me",
+    CV: "Download CV",
+    "your_name": "Your name",
+    "your_email": "Your email",
+    "your_message": "Your message",
+
+    submit: "Submit"
   },
   es: {
     english: "Inglés",
@@ -50,6 +64,7 @@ const translations = {
     home: "Inicio",
     "about-me": "Sobre mí",
     services: "Servicios",
+    portfolio: "Portafolio",
     contact: "Contacto",
     subtitle: "Desarrolladora Web Junior",
     title: "Hola, soy",
@@ -77,27 +92,54 @@ const translations = {
     interact: "Uso de JavaScript para mejorar interactividad",
     arts: "Bachillerato de Artes Escénicas",
     develop: "Grado Superior en Desarrollo de Aplicaciones Web",
+    present: "2023 - Actualmente",
     estudiov: "Curso de Formación del Actor",
     MyServices: "Mis Servicios",
     websites: "Páginas Web Personalizadas",
     "desc-web": "Diseño y desarrollo sitios web totalmente personalizados, adaptados a tus necesidades, con un enfoque único y profesional.",
+    learnMore: "Más información",
     "desc-word": "Creo sitios web dinámicos y profesionales con WordPress y Elementor, facilitando su gestión y optimización.",
     "react-ang": "Desarrollo con React & Angular",
     "desc-react": "Desarrollo aplicaciones web interactivas y escalables utilizando React y Angular, asegurando el rendimiento y una experiencia de usuario fluida, siguiendo las mejores prácticas y estándares modernos.",
     "java-type": "Desarrollo con JavaScript & TypeScript",
     "desc-java": "Desarrollo aplicaciones robustas con JavaScript y TypeScript, mejorando la calidad del código, la mantenibilidad y el rendimiento, mientras implemento funcionalidades dinámicas e interactivas en sitios web.",
     MyWork: "Mi Trabajo",
+    workReact: "Aplicación web desarrollada con React que permite a los usuarios compartir y organizar enlaces de manera dinámica. Implementa una interfaz intuitiva y funcionalidades como la adición y categorización de enlaces, proporcionando una experiencia de usuario fluida.",
+    workWordpress: "Desarrollo completo del sitio web. El proyecto incluyó la implementación de un diseño atractivo y funcional utilizando Elementor, optimización para dispositivos móviles y la integración de secciones dinámicas, facilitando una experiencia de usuario intuitiva y fluida.",
+    workJavaScript: "Desarrollo de un portafolio personal utilizando HTML, CSS y JavaScript. El sitio web presenta una interfaz moderna y responsiva que muestra proyectos destacados, habilidades y experiencia profesional. Incluye funcionalidades interactivas como navegación dinámica y efectos visuales, proporcionando una experiencia de usuario atractiva y fluida",
+    seeMore: "Ver más",
+    contactMe: "Contacto",
+    CV: "Descargar CV",
+    "your_name": "Tu nombre",
+    "your_email": "Tu correo",
+    "your_message": "Tu mensaje",
+    submit: "Enviar"
   },
 };
 
 function changeLanguage(language) {
-  const elements = document.querySelectorAll("[data-lang]");
+  const elements = document.querySelectorAll("[data-lang], [placeholder]");
 
   elements.forEach((element) => {
     const key = element.getAttribute("data-lang");
-    element.textContent = translations[language][key];
+    if (key) {
+      element.textContent = translations[language][key] || element.textContent;
+    }
+
+    const placeholder = element.getAttribute("placeholder");
+    if (placeholder) {
+      // Crear la clave para traducción, eliminando espacios y convirtiendo a minúsculas
+      const translationKey = placeholder.toLowerCase().replace(/\s+/g, '_'); // Asegurando que el espacio sea reemplazado por un guion bajo
+      if (translations[language][translationKey]) {
+        element.setAttribute("placeholder", translations[language][translationKey]);
+      } else {
+        // Si no se encuentra la clave, deja el placeholder original
+        console.log(`No translation found for: ${translationKey}`);
+      }
+    }
   });
 }
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const esButton = document.getElementById("es-button");
